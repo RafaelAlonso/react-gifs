@@ -1,18 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import SearchBar from './components/searchBar';
+import SelectedGif from './components/selectedGif';
 
 import '../assets/stylesheets/application.scss';
 
-const Hello = ({ name }) => {
+const App = () => {
   return (
     <div>
-      Hello,
-      {name}
+      <div className="left-scene">
+        <SearchBar></SearchBar>
+        <SelectedGif id="l0HlJsrIi8dTq1JCw"></SelectedGif>
+      </div>
+      <div className="right-scene"></div>
     </div>
   );
 };
 
 const root = document.getElementById('root');
 if (root) {
-  ReactDOM.render(<Hello name="World" />, root);
+  ReactDOM.render(<App />, root);
 }
